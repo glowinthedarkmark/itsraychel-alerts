@@ -1,0 +1,24 @@
+/* Masonry container */
+.masonry-container {
+  column-count: 4; /* Number of columns */
+  column-gap: 10px; /* Gap between columns */
+}
+
+/* Masonry items */
+.masonry-item {
+  display: inline-block; /* Display items inline */
+  width: 100%; /* Make items full width */
+  margin-bottom: 10px; /* Add some space between items */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .masonry-container {
+    column-count: 3; /* Reduce number of columns on small screens */
+  }
+}
+@media (max-width: 576px) {
+  .masonry-container {
+    column-count: 2; /* Reduce number of columns on extra small screens */
+  }
+}
