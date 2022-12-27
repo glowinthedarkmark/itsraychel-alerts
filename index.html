@@ -2,93 +2,34 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>My Website</title>
-    <style>
-      /* Table styles */
-      table {
-        border-collapse: collapse;
-        width: 100%;
-      }
-
-      th, td {
-        border: 1px solid #dddddd;
-        text-align: left;
-        padding: 8px;
-      }
-
-      /* Alternating row colors */
-      tr:nth-child(even) {
-        background-color: #f2f2f2;
-      }
-
-      /* Responsive table */
-      @media screen and (max-width: 600px) {
-        th, td {
-          display: block;
-          width: 100%;
-          text-align: left;
-        }
-      }
-    </style>
+    <title>My Bootstrap 3 Website</title>
+    <!-- Bootstrap 3 stylesheet -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   </head>
   <body>
-    <h1>My Website</h1>
-    <h2>Table 1</h2>
-    <table>
-      <tr>
-        <th>Column 1</th>
-        <th>Column 2</th>
-      </tr>
-      <tr>
-        <td>Row 1, Column 1</td>
-        <td>Row 1, Column 2</td>
-      </tr>
-      <tr>
-        <td>Row 2, Column 1</td>
-        <td>Row 2, Column 2</td>
-      </tr>
-      <tr>
-        <td>Row 3, Column 1</td>
-        <td>Row 3, Column 2</td>
-      </tr>
-      <tr>
-        <td>Row 4, Column 1</td>
-        <td>Row 4, Column 2</td>
-      </tr>
-      <tr>
-        <td>Row 5, Column 1</td>
-        <td>Row 5, Column 2</td>
-      </tr>
-      <tr>
-        <td>Row 6, Column 1</td>
-        <td>Row 6, Column 2</td>
-      </tr>
-      <tr>
-        <td>Row 7, Column 1</td>
-        <td>Row 7, Column 2</td>
-      </tr>
-      <tr>
-        <td>Row 8, Column 1</td>
-        <td>Row 8, Column 2</td>
-      </tr>
-      <tr>
-        <td>Row 9, Column 1</td>
-        <td>Row 9, Column 2</td>
-      </tr>
-      <tr>
-        <td>Row 10, Column 1</td>
-        <td>Row 10, Column 2</td>
-      </tr>
-    </table>
-    <h2>Table 2</h2>
-    <table>
-      <tr>
-        <th>Column 1</th>
-        <th>Column 2</th>
-      </tr>
-      <tr>
-        <td>Row 1, Column 1</td>
-        <td>Row 1, Column 2</td>
-      </tr>
-      <tr>
-        <td>Row 2, Column 1</td
+    <div class="container">
+      <div class="masonry-container">
+  		<div class="masonry-container">
+  <div class="masonry-item">
+    <!-- Your thumbnail goes here -->
+  </div>
+  <div class="masonry-item">
+    <!-- Your thumbnail goes here -->
+  </div>
+  <!-- Add more thumbnails as needed -->
+</div>
+	</div>
+    </div>
+    <!-- Bootstrap 3 JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>  
+    <script> document.addEventListener('DOMContentLoaded', function() {
+  var masonryContainer = document.querySelector('.masonry-container');
+  var msnry = new Masonry(masonryContainer, {
+    // Masonry options
+  });
+});
+</script>
+</body>
+</html>
