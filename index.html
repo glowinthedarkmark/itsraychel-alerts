@@ -5,33 +5,38 @@
     <title>My Bootstrap 3 Website</title>
     <!-- Bootstrap 3 stylesheet -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Masonry stylesheet -->
+    <link rel="stylesheet" href="path/to/masonry.css">
   </head>
   <body>
     <div class="container">
+      <!-- Placeholder images using the Masonry layout -->
       <div class="masonry-container">
-  		<div class="masonry-container">
-  <div class="masonry-item">
-    <img href=img/(1).png>
-  </div>
-  <div class="masonry-item">
-    <img href=img/(1).png>
-  </div>
-  <div class="masonry-item">
-    <img href=img/(1).png>
-  </div>
-</div>
-	</div>
+        <div class="masonry-item">
+          <img src="https://via.placeholder.com/400x300" alt="Placeholder image">
+        </div>
+        <div class="masonry-item">
+          <img src="https://via.placeholder.com/400x600" alt="Placeholder image">
+        </div>
+        <div class="masonry-item">
+          <img src="https://via.placeholder.com/600x400" alt="Placeholder image">
+        </div>
+        <!-- Add more placeholder images as needed -->
+      </div>
     </div>
     <!-- Bootstrap 3 JavaScript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>  
-    <script> document.addEventListener('DOMContentLoaded', function() {
-  var masonryContainer = document.querySelector('.masonry-container');
-  var msnry = new Masonry(masonryContainer, {
-    // Masonry options
-  });
-});
-</script>
-</body>
+    <!-- Masonry JavaScript -->
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <!-- Initialize Masonry -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var masonryContainer = document.querySelector('.masonry-container');
+        var msnry = new Masonry(masonryContainer, {
+          // Masonry options
+        });
+      });
+    </script>
+  </body>
 </html>
