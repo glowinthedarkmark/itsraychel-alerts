@@ -2,17 +2,73 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Pure Css Animated Background</title>
+  <title>itsraychel bit alerts</title>
   <link rel="stylesheet" href="css/style.css">
-
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
 <body>
-<div class="context">
-        <h1>Pure Css Animated Background</h1>
-    </div>
+
+<!-- HTML -->
+<div class="button-container">
+  <div class="button-row">
+    <button class="btn btn-primary" onclick="copyText('Cheer100')">100 Bits Alert</button>
+  </div>
+  <div class="button-row">
+    <button class="btn btn-primary" onclick="copyText('Cheer200')">200 Bits Alert</button>
+  </div>
+  <!-- Add more rows as needed -->
+</div>
+
+<!-- CSS -->
+<style>
+  .btn {
+    font-size: 25px;
+    padding: 15px 30px;
+    margin: 10px;
+    background-color: #333;
+    border: 2px solid #333;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .btn:hover {
+    background-color: #444;
+    border-color: #444;
+  }
+
+  .btn:active {
+    transform: scale(0.95);
+  }
+
+  .btn.clicked {
+    background-color: gray;
+  }
+
+  .button-container {
+    z-index: 1;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .button-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+</style>
 
 
 <div class="area" >
+
+
+
             <ul class="circles">
                     <li></li>
                     <li></li>
@@ -26,6 +82,65 @@
                     <li></li>
             </ul>
     </div >
+<!-- JavaScript -->
+<script>
+const buttons = document.querySelectorAll('button');
 
+buttons.forEach(button => {
+  button.addEventListener('click', event => {
+    // Add the clicked class to the button
+    button.classList.add('clicked');
+
+    // Remove the clicked class after half a second
+    setTimeout(() => {
+      button.classList.remove('clicked');
+    }, 200);
+  });
+});
+
+function showModal() {
+  // Get the modal element
+  const modal = document.querySelector('.modal');
+
+  // Show the modal
+  modal.style.display = 'block';
+
+  // Set a timeout to hide the modal after 5 seconds
+  setTimeout(function() {
+    modal.style.display = 'none';
+  }, 5000);
+}
+
+function closeModal() {
+  // Get the modal element
+  const modal = document.querySelector('.modal');
+
+  // Hide the modal
+  modal.style.display = 'none';
+}
+
+  function copyText(text) {
+    // Create a temporary textarea element
+    var textArea = document.createElement("textarea");
+
+    // Set the textarea value to the text to copy
+    textArea.value = text;
+
+    // Add the textarea to the document
+    document.body.appendChild(textArea);
+
+    // Select the text in the textarea
+    textArea.select();
+
+    // Copy the text to the clipboard
+    document.execCommand("copy");
+
+    // Remove the textarea from the document
+    document.body.removeChild(textArea);
+  }
+</script>
+<!-- Bootstrap JavaScript -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </body>
+
 </html>
