@@ -5,10 +5,19 @@
   <title>itsraychel bit alerts</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
 </head>
 <body>
 
 <!-- HTML -->
+
+<!-- floating text -->
+<div class="d-flex justify-content-center align-items-center" style="position: fixed; top: 10%; left: 50%; transform: translate(-50%, -50%); font-size: 48px;">
+  itsraychel bit alerts
+</div>
+
 <div class="button-container">
   <div class="button-row">
     <button class="btn btn-primary" onclick="copyText('Cheer100')">100 Bits Alert</button>
@@ -16,11 +25,24 @@
   <div class="button-row">
     <button class="btn btn-primary" onclick="copyText('Cheer200')">200 Bits Alert</button>
   </div>
+  <div class="button-row">
+    <button class="btn btn-primary" onclick="copyText('Cheer300')">100 Bits Alert</button>
+  </div>
+  <div class="button-row">
+    <button class="btn btn-primary" onclick="copyText('Cheer400')">400 Bits Alert</button>
+  </div>
+  <div class="button-row">
+    <button class="btn btn-primary" onclick="copyText('Cheer500')">500 Bits Alert</button>
+  </div>
+  <div class="button-row">
+    <button class="btn btn-primary" onclick="copyText('Cheer600')">600 Bits Alert</button>
+  </div>
   <!-- Add more rows as needed -->
 </div>
 
 <!-- CSS -->
 <style>
+
   .btn {
     font-size: 25px;
     padding: 15px 30px;
@@ -80,6 +102,9 @@
                     <li></li>
                     <li></li>
                     <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
             </ul>
     </div >
 <!-- JavaScript -->
@@ -97,27 +122,6 @@ buttons.forEach(button => {
     }, 200);
   });
 });
-
-function showModal() {
-  // Get the modal element
-  const modal = document.querySelector('.modal');
-
-  // Show the modal
-  modal.style.display = 'block';
-
-  // Set a timeout to hide the modal after 5 seconds
-  setTimeout(function() {
-    modal.style.display = 'none';
-  }, 5000);
-}
-
-function closeModal() {
-  // Get the modal element
-  const modal = document.querySelector('.modal');
-
-  // Hide the modal
-  modal.style.display = 'none';
-}
 
   function copyText(text) {
     // Create a temporary textarea element
@@ -137,10 +141,35 @@ function closeModal() {
 
     // Remove the textarea from the document
     document.body.removeChild(textArea);
+
+    // Add a modal popup to alert the user
+    $('#copiedModal').modal('show');
+
+    // Set a timeout for the modal to close after 5 seconds
+    
+    setTimeout(function() {
+  $('#copiedModal').modal('hide');
+}, 5000);
+
+
   }
 </script>
 <!-- Bootstrap JavaScript -->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+<!-- Modal -->
+<div class="modal fade" id="copiedModal" tabindex="-1" role="dialog" aria-labelledby="copiedModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="copiedModalLabel">Copied to clipboard</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
 </body>
 
 </html>
