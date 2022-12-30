@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>itsraychel bit alerts</title>
-  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
@@ -19,73 +19,26 @@
 </div>
 
 <div class="button-container">
-  <div class="button-row">
+  <div class="button-row col-6 col-md-4 col-lg-6">
     <button class="btn btn-primary" onclick="copyText('Cheer100')">100 Bits Alert</button>
   </div>
-  <div class="button-row">
+  <div class="button-row col-6 col-md-4 col-lg-6">
     <button class="btn btn-primary" onclick="copyText('Cheer200')">200 Bits Alert</button>
   </div>
-  <div class="button-row">
-    <button class="btn btn-primary" onclick="copyText('Cheer300')">100 Bits Alert</button>
+  <div class="button-row col-6 col-md-4 col-lg-6">
+    <button class="btn btn-primary" onclick="copyText('Cheer300')">300 Bits Alert</button>
   </div>
-  <div class="button-row">
+  <div class="button-row col-6 col-md-4 col-lg-6">
     <button class="btn btn-primary" onclick="copyText('Cheer400')">400 Bits Alert</button>
   </div>
-  <div class="button-row">
+  <div class="button-row col-6 col-md-4 col-lg-6">
     <button class="btn btn-primary" onclick="copyText('Cheer500')">500 Bits Alert</button>
   </div>
-  <div class="button-row">
+  <div class="button-row col-6 col-md-4 col-lg-6">
     <button class="btn btn-primary" onclick="copyText('Cheer600')">600 Bits Alert</button>
   </div>
   <!-- Add more rows as needed -->
 </div>
-
-<!-- CSS -->
-<style>
-
-  .btn {
-    font-size: 25px;
-    padding: 15px 30px;
-    margin: 10px;
-    background-color: #333;
-    border: 2px solid #333;
-    color: #fff;
-    border-radius: 10px;
-    cursor: pointer;
-  }
-
-  .btn:hover {
-    background-color: #444;
-    border-color: #444;
-  }
-
-  .btn:active {
-    transform: scale(0.95);
-  }
-
-  .btn.clicked {
-    background-color: gray;
-  }
-
-  .button-container {
-    z-index: 1;
-    margin: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  .button-row {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-</style>
-
 
 <div class="area" >
 
@@ -149,7 +102,7 @@ buttons.forEach(button => {
     
     setTimeout(function() {
   $('#copiedModal').modal('hide');
-}, 5000);
+}, 3000);
 
 
   }
