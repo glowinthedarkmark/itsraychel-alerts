@@ -1,2 +1,2 @@
 # itsraychel-alerts
-Sub and Bit Alerts for twitch.tv/itsraychel
+Bit Alerts for twitch.tv/itsraychel
